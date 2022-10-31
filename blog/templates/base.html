@@ -20,7 +20,24 @@
             <li><a href="">About</a></li>
             <li><a href="">Contact</a></li>
             <li><a href="">Blog</a></li>
+            {%if user.is_authenticated%}
+            <li>
+                <a href="{% url 'blog:logout' %}">Logout</a>
+            </li>
+            {%else%}
+
+            <li class="nav-item"><a class="nav-link" href="{%url 'blog:login'%}">Login</a></li>
+        
+            <li>
+                <a href="{%url 'account:signup'%}">Sign up</a>
+            </li>
+            {%endif%}
+
+            {%if request.user.is_authenticated%}
+            <li>Hello {{request.user}}</li>
+            {%endif%}
         </ul>
+
 
         <div class="burger">
             <div class="line1"></div>
@@ -28,6 +45,18 @@
             <div class="line3"></div>
         </div>
     </nav>
+
+    <div class="container mt-5">
+        {%if messages%}
+        {%for message in messages%}
+        <div class="alert alert-danger mt-5" role="alert">
+            {{message}}
+        </div>
+        {%endfor%}
+
+        {%endif%}
+    </div>
+
  {%block content%}
  
  {%endblock content%}

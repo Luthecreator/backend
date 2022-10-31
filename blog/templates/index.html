@@ -3,7 +3,7 @@
 
 
     {%load static%}
-    <img src="{% static 'images/Patrick Ta Makeup Flatlay.jpg' %}" alt="my image">
+    <img src="{% static 'images/Patrick Ta Makeup Flatlay.jpg' %}" alt="my image" width="1000" height="1000">
 
     <h1>These are My Posts</h1>
 
@@ -14,7 +14,7 @@
     </a>
    </h2>
    {% if post.post_image %}
-   <img src="{{post.post_image.url}}" alt="">
+   <img src="{{post.post_image.url}}" alt="" width="200" height="200">
    {%endif%}
 
    <p class="date">
