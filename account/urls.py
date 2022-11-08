@@ -5,5 +5,6 @@ app_name= "account"
 
 urlpatterns = [
    # path("account/login",views.loginView,name="login"),
-   path("signup/",views.registerView,name="signup")
+   path("signup/",views.registerView,name="signup"),
+   path("<pk/update",views.UserEditView.as_view(),name="edit_profile")
 ]

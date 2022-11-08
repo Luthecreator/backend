@@ -97,3 +97,9 @@ def profileView(request):
 def logoutView(request):
     logout(request)
     return redirect('/')
+
+def aboutPage(request):
+ return render(request, 'about.html',{})
+
+def ContactUs(request):
+    return render(request, 'contact.html',{})

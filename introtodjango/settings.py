@@ -50,7 +50,8 @@ INSTALLED_APPS = [
 
     "crispy_forms",
 
-    "account"
+    "account",
+    "jazzmin"
 
 ]
 CRISPY_TEMPLATE_PACK = "bootstrap4"

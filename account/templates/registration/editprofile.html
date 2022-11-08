@@ -1,0 +1,8 @@
+{%if form.errors%}
+<p>There was an error</p>
+{%endif%}
+<form action="POST">
+    {%csrf_token%}
+    {{form.as_p}}
+    <input type="submit" value="update profile">
+</form>
